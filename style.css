@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: metropolis;
+    box-sizing: border-box;
+}
+
+/* styles for header and footer */
+header,
+footer {
+    margin: 0;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+}
+
+/* score-board styles */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-board div {
+    font-size: 3rem;
+    position: relative;
+    margin: 0px 30px;
+}
+
+.score-board .user::after {
+    content: "user";
+    color: blueviolet;
+    left: 0px;
+    border: 1px solid blueviolet;
+}
+
+.score-board .user::after,
+.score-board .computer::after {
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 2rem;
+    top: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+}
+
+.score-board .computer::after {
+    content: "computer";
+    color: crimson;
+    border: 1px solid crimson;
+    left: 2px;
+}
+
+.score-board .user,
+.score-board .computer {
+    display: inline-block;
+    width: 70px;
+    margin-top: 50px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* options styles */
+.selected {
+    border: 5px solid dodgerblue;
+    border-radius: 50%;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options img {
+    width: 100px;
+    border: 5px solid black;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+    margin: 20px;
+}
+
+.options img:hover {
+    cursor: pointer;
+    border-color: aqua;
+}
+
+.foot-image {
+    height: 42vh;
+    width: 100vw;
+    object-fit: cover;
+
+}
