@@ -6,6 +6,8 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
+const messageBox= document.querySelector(".message")
+
 let userScore = 0;
 let computerScore = 0;
 
@@ -24,9 +26,16 @@ const generateComputerResponse = () => {
 const result = (winner, userResponse, computerResponse) => {
     switch (winner) {
         case "user":
+            // display message
+            messageBox.innerHTML = `You won! ${userResponse} beats ${computerResponse}`
+            document.querySelector(`#${userResponse}`).classList.toggle("won")
+            setTimeout(2000,()=>document.querySelector(`#${userResponse}`).classList.remove("won"))
+            // update scoreboard
             userBoard.innerHTML = ++userScore
             break
         case "computer":
+            // 
+            messageBox.innerHTML = `You lost! ${computerResponse} beats ${userResponse}`
             computerBoard.innerHTML = ++computerScore
             break
         default:

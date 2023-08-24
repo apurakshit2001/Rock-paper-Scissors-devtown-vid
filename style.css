@@ -15,6 +15,16 @@ footer {
     text-align: center;
 }
 
+/* message box style */
+.message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px;
+}
+
 /* score-board styles */
 .score-board {
     display: flex;
@@ -66,7 +76,7 @@ footer {
 
 /* options styles */
 .selected {
-    border: 5px solid dodgerblue;
+    border: 5px solid dodgerblue !important;
     border-radius: 50%;
 }
 
